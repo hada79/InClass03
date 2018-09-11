@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InClass03</string>
+    <string name="submit">Submit</string>
+    <string name="name" />
+    <string name="email" />
+    <string name="address" />
+    <string name="phone" />
+    <string name="mood" />
+    <string name="displayName">Name:</string>
+    <string name="displayEmail">E-mail:</string>
+    <string name="displayAddress">Address:</string>
+    <string name="displayPhone">Phone:</string>
+    <string name="displayMood">Mood: </string>
+    <string name="information">User Information</string>
+    <string name="edit" />
+    <string name="save">Save</string>
+    <string name="changeAttribute" />
+    <string name="editAttribute">Default</string>
+</resources>
