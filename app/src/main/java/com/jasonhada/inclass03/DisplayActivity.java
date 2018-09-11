@@ -104,18 +104,23 @@ public class DisplayActivity extends AppCompatActivity {
     protected void onActivityResult(int  requestCode, int resultCode, Intent data) {
         if(resultCode == RESULT_OK) {
             if(requestCode == REQ_CODE_NAME) {
+                user.name = data.getExtras().getString(VALUE_KEY);
                 TextView value = findViewById(R.id.displayName);
                 value.setText(data.getExtras().getString(VALUE_KEY));
             } else if(requestCode == REQ_CODE_ADDRESS) {
+                user.address = data.getExtras().getString(VALUE_KEY);
                 TextView value = findViewById(R.id.displayAddress);
                 value.setText(data.getExtras().getString(VALUE_KEY));
             } else if(requestCode == REQ_CODE_EMAIL) {
+                user.email = data.getExtras().getString(VALUE_KEY);
                 TextView value = findViewById(R.id.displayEmail);
                 value.setText(data.getExtras().getString(VALUE_KEY));
             } else if(requestCode == REQ_CODE_PHONE) {
+                user.phone = data.getExtras().getString(VALUE_KEY);
                 TextView value = findViewById(R.id.displayPhone);
                 value.setText(data.getExtras().getString(VALUE_KEY));
             } else if(requestCode == REQ_CODE_MOOD) {
+                user.mood = data.getExtras().getString(VALUE_KEY);
                 TextView value = findViewById(R.id.displayMood);
                 value.setText(data.getExtras().getString(VALUE_KEY));
             }
