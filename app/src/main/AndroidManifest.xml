@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditActivity" />
-        <activity android:name=".DisplayActivity">
+        <activity android:name=".EditActivity">
             <intent-filter>
                 <action android:name="com.jasonhada.inclass03.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".DisplayActivity"></activity>
     </application>
 
 </manifest>

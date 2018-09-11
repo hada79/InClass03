@@ -17,14 +17,14 @@ public class DisplayActivity extends AppCompatActivity {
     public static final int REQ_CODE_PHONE = 104;
     public static final int REQ_CODE_MOOD = 105;
     public static final String VALUE_KEY = "value";
-
+    User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
         if(getIntent() != null && getIntent().getExtras() != null) {
-            User user = (User) getIntent().getExtras().getSerializable(MainActivity.USER_KEY);
+            user = (User) getIntent().getExtras().getSerializable(MainActivity.USER_KEY);
 
             TextView nameTv = findViewById(R.id.displayName);
             nameTv.setText(user.name);
@@ -45,11 +45,9 @@ public class DisplayActivity extends AppCompatActivity {
         findViewById(R.id.editName).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                TextView name = findViewById(R.id.displayName);
                 Intent i = new Intent("com.jasonhada.inclass03.action.VIEW");
                 i.addCategory(Intent.CATEGORY_DEFAULT);
-                i.putExtra(VALUE_KEY, name.getText().toString());
+                i.putExtra(VALUE_KEY, user.name);
                 startActivityForResult(i, REQ_CODE_NAME);
                 //startActivity(i);
             }
