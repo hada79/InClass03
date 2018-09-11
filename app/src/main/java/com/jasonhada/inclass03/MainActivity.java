@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 EditText mood = findViewById(R.id.mood);
 
                 if(name.getText().toString().isEmpty()
-                        //|| email.getText().toString().isEmpty() || address.getText().toString().isEmpty()
-                        //|| phone.getText().toString().isEmpty() || mood.getText().toString().isEmpty()
+                        || email.getText().toString().isEmpty() || address.getText().toString().isEmpty()
+                        || phone.getText().toString().isEmpty() || mood.getText().toString().isEmpty()
                         ) {
                     Toast.makeText(MainActivity.this, "Please fill out all fields.", Toast.LENGTH_SHORT).show();
                     return;
